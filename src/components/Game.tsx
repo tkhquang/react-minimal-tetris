@@ -9,6 +9,7 @@ import { useGameLogic } from "../hooks/useGameLogic";
 import { DEFAULT_METRICS } from "../core/constants";
 import { Board } from "../core/Board";
 import type { DrawEffect } from "../core/types";
+import VirtualControls from "./VirtualControls";
 
 /**
  * Game component serves as the main container for the Tetris game.
@@ -72,35 +73,47 @@ const Game = () => {
         backgroundColor: "#111",
       }}
     >
-      <div>
-        <h1
-          style={{
-            color: "#fff",
-            textAlign: "center",
-            marginBottom: "20px",
-            fontFamily: "Arial, sans-serif",
-          }}
-        >
-          Tetris
-        </h1>
-        <BoardCanvas
-          metrics={DEFAULT_METRICS}
-          board={board}
-          drawEffect={drawEffect}
-        />
-        <div
-          style={{
-            color: "#fff",
-            textAlign: "center",
-            marginTop: "20px",
-            fontFamily: "Arial, sans-serif",
-            fontSize: "14px",
-          }}
-        >
-          {gameState.type === "GameOver" && (
-            <p>Game Over! Press Enter to restart</p>
-          )}
-          <p>Controls: ← → ↓ to move, ↑ to rotate CCW, Space to rotate CW</p>
+      <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+        <div>
+          <h1
+            style={{
+              color: "#fff",
+              textAlign: "center",
+              marginBottom: "20px",
+              fontFamily: "Arial, sans-serif",
+            }}
+          >
+            Tetris
+          </h1>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <BoardCanvas
+              metrics={DEFAULT_METRICS}
+              board={board}
+              drawEffect={drawEffect}
+            />
+            <VirtualControls gameState={gameState} />
+          </div>
+          <div
+            style={{
+              color: "#fff",
+              textAlign: "center",
+              marginTop: "20px",
+              fontFamily: "Arial, sans-serif",
+              fontSize: "14px",
+            }}
+          >
+            <p>
+              Keyboard: ← → ↓ to move, ↑ to rotate CCW, Space to rotate CW. If
+              Game Over, Press Enter to restart
+            </p>
+          </div>
         </div>
       </div>
     </div>
