@@ -9,13 +9,13 @@ import type { Board } from "./Board";
  * Each piece type has a unique color for visual distinction.
  */
 export type Color =
-  | "Red" // O-piece (square)
-  | "Green" // T-piece
-  | "Blue" // I-piece (line)
-  | "Magenta" // Z-piece
-  | "Cyan" // S-piece
-  | "Yellow" // J-piece
-  | "Orange"; // L-piece
+  | "Red"
+  | "Green"
+  | "Blue"
+  | "Magenta"
+  | "Cyan"
+  | "Yellow"
+  | "Orange";
 
 /**
  * Represents a position on the game board.
