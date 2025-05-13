@@ -6,6 +6,8 @@ This is a minimal TypeScript/React implementation of Tetris using HTML5 Canvas f
 
 ![Demo](./docs/demo.gif)
 
+Live Demo: [tkhquang.github.io/react-minimal-tetris/](https://tkhquang.github.io/react-minimal-tetris/)
+
 ## Architecture
 
 The application follows a modular structure with clear separation of concerns. The `Board` class serves as the core data structure using a sparse Map for efficient storage. The `useGameLogic` hook manages all game state and timing, while React components handle rendering through Canvas.
