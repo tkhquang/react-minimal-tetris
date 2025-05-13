@@ -135,3 +135,7 @@ The game will start automatically once loaded. Use the arrow keys to control pie
 ## Credits
 
 This implementation was restructured and documented with assistance from Claude 3.7, maintaining the minimal approach while adding professional organization and comprehensive documentation.
+
+## Acknowledgements
+
+This React/TypeScript port is based on the original [Rust implementation](https://github.com/da-x/tetris-demo) by [Dan Aloni](https://github.com/da-x), licensed under MIT.
